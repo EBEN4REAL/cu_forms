@@ -9,23 +9,15 @@ include 'includes/config.php';
 
 
 //section that sends users medical profile to the database
-if (isset($_POST['register'])) {
-   $first_name = $_POST['user_first-name'];
-   $last_name  =  $_POST['user_last_name'];
-   $user_email = $_POST['email'];
-   $password   =  $_POST['password'];
-   $role = $_POST['role'];
-   $location = $_POST['location'];
-   $phone = $_POST['phone'];
+if (isset($_POST['submit'])) {
+   echo $_POST['dept'];
+   $student_name = $_POST['student_name'];
+   $matric_number  =  $_POST['matric_number'];
+   $dept = $_POST['dept'];
 
-   
-  if ($_POST['password'] == $_POST['con_password']) {
-    $register_user = "INSERT INTO medical_profile (first_name,last_name,phone,Location,email) VALUES ('$first_name','$last_name','$phone','$location','$user_email')";
-    $sql_query = mysqli_query($connected , $register_user);
+    $store_record = "INSERT INTO 	student_records (student_name,matric_number,dept) VALUES ('$student_name','$matric_number','$dept')";
+    $sql_query = mysqli_query($connected , $store_record);
 
-  }else{
-    
-  }
 
 }
 
@@ -104,8 +96,7 @@ if (isset($_POST['register'])) {
   <div class="col-md-6" id="">
     <div class="panel panel-default" style="border-radius: 0;">
       <div class="panel-heading" >
-        <h1 class="text-center"><span class=""><img src="img/culogo.png" width="150px" style=" transform: translateY(-100px)"></span></h1>
-         <h3 class="text-center">Office of the Registrar</h3>
+        <h1 class="text-center"><span class=""><img src="img/culogo.png" width="150px" style=" "></span></h1>
         <h3 class="text-center">Final Clearance Form</h3>
       </div>
       <div class="panel-body">
@@ -116,7 +107,7 @@ if (isset($_POST['register'])) {
               <label><span class="glyphicon glyphicon-user"></span> &nbsp; Student  Name</label>
             </div>
              <div class="col-sm-8">
-              <input type="text" name="user_first-name" placeholder="First name"  class="form-control" required>
+              <input type="text" name="student_name" placeholder="Student Name"  class="form-control" required>
             </div>
               
             </div>
@@ -128,7 +119,7 @@ if (isset($_POST['register'])) {
               <label><span class="glyphicon glyphicon-user"></span> &nbsp;Matric Number</label>
             </div>
              <div class="col-sm-8">
-              <input type="text" name="user_last_name" placeholder="Last Name"  class="form-control" required>
+              <input type="text" name="matric_number" placeholder="Matric Number"  class="form-control" required>
             </div>
               
             </div>
@@ -142,93 +133,31 @@ if (isset($_POST['register'])) {
               <label><img src="img/mail-black-envelope-symbol.png" width="20px"> &nbsp;Department</label>
             </div>
              <div class="col-sm-8">
-              <input type="email" name="email" placeholder="Email"  class="form-control" required>
+              <input type="text" name="dept" placeholder="Department"  class="form-control" required>
             </div>
               
             </div>
           </div>
 
+          <div>
+            <h3>You are pleae required to comment on the outstanding indebtedness of the above named student(if any)
+            in order to clear him/her for graduation</h3>
+          </div>
+          <hr>
+
+          <div>
+            <h3>Financial Services Department</h3>
+          </div>
+          <hr>
 
            <div class='form-group'>
             <div class="row">
             <div class="col-sm-4">
-              <label><img src="img/man-vacuum.png" width="20px"> &nbsp;Role</label>
+              <label>Tuition/Rel</label>
             </div>
              <div class="col-sm-8">
-              <select name="role" class="form-control"> 
-                <option value="">Select your role</option>
-                <option value="Patient">Patient</option>
-                <option value="Medical Professional">Medical Professional</option>
-              </select>
+              <input type="text" name="dept" placeholder="Department"  class="form-control" required>
             </div>
-              
-            </div>
-          </div>
-
-           <div class='form-group'>
-            <div class="row">
-            <div class="col-sm-4">
-              <label><img src="img/id-card.png" width="20px"> &nbsp;Medical Id</label>
-            </div>
-             <div class="col-sm-8">
-              <input type="text" name="med_id" placeholder="Medical Id"  class="form-control" required>
-            </div>
-              
-            </div>
-          </div>
-
-           
-            <div class='form-group'>
-            <div class="row">
-            <div class="col-sm-4">
-              <label><img src="img/mobile-phone.png" width="20px"> &nbsp;Phone</label>
-            </div>
-             <div class="col-sm-8">
-              <input type="text" name="phone" class="form-control">
-              </select>
-            </div>
-              
-            </div>
-          </div>
-
-           <div class='form-group'>
-            <div class="row">
-            <div class="col-sm-4">
-              <label><span class="glyphicon glyphicon-lock"></span> &nbsp;Password</label>
-            </div>
-             <div class="col-sm-8">
-              <input type="password" name="password" placeholder="password"  class="form-control" required>
-            </div>
-
-            
-              
-            </div>
-          </div>
-
-          <div class='form-group'>
-            <div class="row">
-            <div class="col-sm-4">
-              <label><span class="glyphicon glyphicon-lock"></span> &nbsp;Password</label>
-            </div>
-             <div class="col-sm-8">
-              <input type="password" name="con_password" placeholder="Confirm password"  class="form-control" required>
-            </div>
-
-            
-              
-            </div>
-          </div>
-
-           <div class='form-group'>
-            <div class="row">
-            <div class="col-sm-4">
-              <label><span class=""><img src="img/placeholder.png" width="25px"></span> &nbsp;Location*</label>
-            </div>
-             <div class="col-sm-8">
-             <textarea cols="" rows="5" class="form-control" id="location" name="location"></textarea>
-            </div>
-
-            
               
             </div>
           </div>
@@ -239,7 +168,7 @@ if (isset($_POST['register'])) {
              
             </div>
              <div class="col-sm-8">
-              <input type="submit"  style="border-radius: 0;" name="register" placeholder="password"  value="Sign Up" class="form-control btn btn-primary" required/>
+              <input type="submit"  style="border-radius: 0;" name="submit" placeholder="password"  value="Add Records" class="form-control btn btn-primary" required/>
             </div>
               
             </div>
