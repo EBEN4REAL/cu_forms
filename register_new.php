@@ -140,8 +140,8 @@ if (isset($_POST['submit'])) {
           </div>
 
           <div>
-            <h3>You are pleae required to comment on the outstanding indebtedness of the above named student(if any)
-            in order to clear him/her for graduation</h3>
+            <h5>You are pleae required to comment on the outstanding indebtedness of the above named student(if any)
+            in order to clear him/her for graduation</h5>
           </div>
           <hr>
 
@@ -153,14 +153,141 @@ if (isset($_POST['submit'])) {
            <div class='form-group'>
             <div class="row">
             <div class="col-sm-4">
-              <label>Tuition/Rel</label>
+              <label>Tuition/Related Fees</label>
             </div>
              <div class="col-sm-8">
-              <input type="text" name="dept" placeholder="Department"  class="form-control" required>
+              <input type="text" name="tuition_fees" placeholder="Department"  class="form-control" required>
             </div>
               
             </div>
           </div>
+
+           <div class='form-group'>
+            <div class="row">
+            <div class="col-sm-4">
+              <label>Make Up Resit</label>
+            </div>
+             <div class="col-sm-8">
+              <input type="text" name="make_up_resit" placeholder="Department"  class="form-control" required>
+            </div>
+              
+            </div>
+          </div>
+
+           <div class='form-group'>
+            <div class="row">
+            <div class="col-sm-4">
+              <label>CMFB loan</label>
+            </div>
+             <div class="col-sm-8">
+              <input type="text" name="cmfb_loan" placeholder="CMFB loan"  class="form-control" required>
+            </div>
+              
+            </div>
+          </div>
+
+           <div class='form-group'>
+            <div class="row">
+            <div class="col-sm-4">
+              <label>Laptop Loan</label>
+            </div>
+             <div class="col-sm-8">
+              <input type="text" name="laptop_loan" placeholder="Laptop Loan"  class="form-control" required>
+            </div>
+              
+            </div>
+          </div>
+          
+           <div class='form-group'>
+            <div class="row">
+            <div class="col-sm-4">
+              <label>Staff Guarantee</label>
+            </div>
+             <div class="col-sm-8">
+              <input type="text" name="staff_guarantee" placeholder="Staff Guarantee"  class="form-control" required>
+            </div>
+              
+            </div>
+          </div>
+
+           <div class='form-group'>
+            <div class="row">
+            <div class="col-sm-4">
+              <label>Personal Financial Integrity</label>
+            </div>
+             <div class="col-sm-8">
+              <input type="text" name="personal_financial_integrity" placeholder="Personal Financial IntegrityStaff Guarantee"  class="form-control" required>
+            </div>
+              
+            </div>
+          </div>
+
+           <div class='form-group'>
+            <div class="row">
+            <div class="col-sm-4">
+              <label>Others</label>
+            </div>
+             <div class="col-sm-8">
+              <input type="text" name="others" placeholder="Others"  class="form-control" required>
+            </div>
+              
+            </div>
+          </div>
+
+          <hr>
+          <h3>Center for learning Resources</h3>
+          <hr>
+          <div class='form-group'>
+            <div class="row">
+            <div class="col-sm-4">
+              <label>Books outstanding</label>
+            </div>
+             <div class="col-sm-8">
+              <input type="text" name="books_outstanding" placeholder="Books Outstanding"  class="form-control" required>
+            </div>
+              
+            </div>
+          </div>
+
+          <div class='form-group'>
+            <div class="row">
+            <div class="col-sm-4">
+              <label>Outstanding bills on damaged books </label>
+            </div>
+             <div class="col-sm-8">
+              <input type="text" name="others" placeholder="Others"  class="form-control" required>
+            </div>
+              
+            </div>
+          </div>
+
+          <hr>
+          <h3>Center for Systems & information Services</h3>
+          <hr>
+
+          <div class='form-group'>
+            <div class="row">
+            <div class="col-sm-4">
+              <label>Registration Clearance</label>
+            </div>
+             <div class="col-sm-8">
+              <input type="text" name="registration_clearance" placeholder="Registration Clearance"  class="form-control" required>
+            </div>
+            </div>
+          </div>
+
+          <div class='form-group'>
+            <div class="row">
+            <div class="col-sm-4">
+              <label>Equipment Damage Clearance</label>
+            </div>
+             <div class="col-sm-8">
+              <input type="text" name="others" placeholder="Others"  class="form-control" required>
+            </div>
+              
+            </div>
+          </div>
+          
 
            <div class='form-group'>
             <div class="row">
