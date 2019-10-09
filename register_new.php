@@ -287,7 +287,57 @@ if (isset($_POST['submit'])) {
               
             </div>
           </div>
+
+           <div class='form-group'>
+            <div class="row">
+            <div class="col-sm-4">
+              <label>Other Service charge </label>
+            </div>
+             <div class="col-sm-8">
+              <input type="text" name="other_service_charge" placeholder="Other Service charge"  class="form-control" required>
+            </div>
+              
+            </div>
+          </div>
+
+          <div class='form-group'>
+            <div class="row">
+            <div class="col-sm-4">
+              <label>Other </label>
+            </div>
+             <div class="col-sm-8">
+              <input type="text" name="others" placeholder="Others"  class="form-control" required>
+            </div>
+              
+            </div>
+          </div>
+          <hr>
+          <h3>Academic Department</h3>
+          <hr>
           
+           <div class='form-group'>
+            <div class="row">
+            <div class="col-sm-4">
+              <label>Attendance Requirement </label>
+            </div>
+             <div class="col-sm-8">
+              <input type="text" name="attendance_requirement" placeholder="Attendance Requirement"  class="form-control" required>
+            </div>
+              
+            </div>
+          </div>
+
+          <div class='form-group'>
+            <div class="row">
+            <div class="col-sm-4">
+              <label>The student is hereby cleared/not Cleared </label>
+            </div>
+             <div class="col-sm-8">
+              <input type="text" name="student_status" placeholder="cleared/not Cleared"  class="form-control" required>
+            </div>
+              
+            </div>
+          </div>
 
            <div class='form-group'>
             <div class="row">
